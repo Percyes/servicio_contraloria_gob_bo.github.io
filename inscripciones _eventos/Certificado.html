@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificado</title>
+<style>
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #1a365d;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            width: 165px;
+            height: auto;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        /* Contenedor principal del visor */
+        .pdf-card {
+            width: 100%;
+            max-width: 850px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #d1d5db;
+        }
+
+        /* Barra ploma superior con controles distribuidos a los lados */
+        .pdf-toolbar {
+            background-color: #4d4d4d; /* Tono plomo institucional */
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+
+        .pdf-toolbar-left span {
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .pdf-toolbar-right {
+            display: flex;
+            gap: 8px;
+        }
+
+        .pdf-toolbar-right button {
+            background-color: #374151;
+            color: #ffffff;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .pdf-toolbar-right button:hover {
+            background-color: #1f2937;
+        }
+
+        /* Área donde va el PDF */
+        .pdf-viewport {
+            width: 100%;
+            height: 70vh;
+            background: #e5e7eb;
+        }
+        .pdf-viewport iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            background-color: #1a365d;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</style>
+</head>
+<body>
+<header>
+<img src="logo.png" alt="Logo" style="width:200px;">
+</header>
+<div class="content">
+<h2>El siguiente documento fue emitido por la Contraloría General del Estado</h2>
+<h3>Datos del/los Firmante(s):</h3>
+<p><strong>NOMBRE:</strong> LARITZA ARENAS REYES</p>
+<main>
+                        <div class="pdf-card">
+                            <!-- Barra ploma superior -->
+                            <div class="pdf-toolbar">
+                                <!-- Izquierda: 1/1 -->
+                                <div class="pdf-toolbar-left">
+                                    <span>1 / 1</span>
+                                </div>
+                                <!-- Derecha: Anterior y Siguiente -->
+                                <div class="pdf-toolbar-right">
+                                    <button type="button">PAGINA ANTERIOR <</button>
+                                    <button type="button">PAGINA SIGUIENTE></button>
+                                </div>
+                            </div>
+
+                            <!-- Visor del PDF -->
+                            <div class="pdf-viewport">
+                                <!-- REEMPLAZA "tu-archivo.pdf" por el nombre de tu archivo PDF local -->
+                                <iframe src="Certificado.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+                                    <p>Tu navegador no soporta la visualización de PDF. Puedes <a href="tu-archivo.pdf">descargar el archivo aquí</a>.</p>
+                                </iframe>
+                            </div>
+                        </div>
+                    </main>
+<a href="#" class="btn-salir" style="float:right; background-color: #1a4a5a; color: #fff; padding: 10px 20px; text-decoration: none; display: inline-block; margin-top: 20px;">SALIR</a>
+</div>
+<footer>
+<p style="color:white; font-size:12px;">2026 - Contraloría General del Estado</p>
+</footer>
+</body>
+</html>
